@@ -1,7 +1,7 @@
 .line-form {
   position: relative;
-  padding-top: 67px;
-  padding-bottom: 67px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   width: 100%;
 
   @media (max-width: 575px) {
@@ -14,6 +14,17 @@
   }
 
   &_desc {
+    padding-top: 35px;
+    padding-bottom: 35px;
+
+    .line-form__title {
+      margin-bottom: 35px;
+    }
+
+    .line-form__list {
+      margin-bottom: 45px;
+    }
+
     @media (max-width: 575px) {
       display: none;
     }

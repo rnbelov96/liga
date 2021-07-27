@@ -19,10 +19,14 @@
 .calc__title {
   @include title;
   color: $blue;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 
   span {
     color: $green;
+  }
+
+  @media (max-width: 1450px) {
+    font-size: 55px;
   }
 
   @media (max-width: 991px) {
@@ -48,7 +52,7 @@
 }
 
 .calc__input-box {
-  margin-bottom: 35px;
+  margin-bottom: 26px;
 }
 
 .calc__label-box {
@@ -64,7 +68,7 @@
 }
 
 .calc__input-label {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   color: $blue;
   text-transform: uppercase;
@@ -84,7 +88,7 @@
 }
 
 .calc__input-number {
-  font-size: 30px;
+  font-size: 20px;
   text-transform: uppercase;
   color: $green;
   font-weight: bold;
@@ -92,7 +96,7 @@
   line-height: 34px;
 
   span {
-    font-size: 48px;
+    font-size: 30px;
     margin-left: 18px;
 
     @media (max-width: 575px) {
@@ -203,14 +207,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 34px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
   color: $blue;
-
-  @media (max-width: 575px) {
-    font-size: 27px;
-  }
 }
 
 .calc__result-box {
@@ -232,14 +232,14 @@
 .calc__gain-box {
   width: 50%;
   border: solid 2px #06cef0;
-  min-height: 161px;
+  min-height: 124px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 45px;
-  padding-bottom: 30px;
+  padding-top: 32px;
+  padding-bottom: 20px;
   transform: skewX(348deg);
 
   &:first-child {
@@ -250,6 +250,12 @@
       margin-bottom: 0px;
       border-bottom: none;
     }
+  }
+
+  @media (max-width: 1450px) {
+    min-height: 110px;
+    padding-top: 23px;
+    padding-bottom: 15px;
   }
 
   @media (max-width: 1200px) {
@@ -303,7 +309,7 @@
   transform: skewX(12deg);
 
   span {
-    font-size: 76.3px;
+    font-size: 70px;
     line-height: 70px;
 
     @media (max-width: 1300px) {
