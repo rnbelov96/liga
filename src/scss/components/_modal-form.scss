@@ -1,0 +1,110 @@
+.modal-form {
+  @include max-width(450px);
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 98%;
+  background-color: white;
+}
+
+.modal-form__title {
+  text-align: center;
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: $blue;
+
+  span {
+    color: $green;
+  }
+}
+
+.modal-form__input-list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.modal-form__input-box {
+  min-height: 90px;
+  padding-bottom: 10px;
+  padding-top: 17px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #e6fafd;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  @include max-width(600px);
+}
+
+.modal-form__input-label {
+  font-size: 18px;
+  font-weight: 300;
+  color: #242424;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.modal-form__input {
+  border: 1px solid transparent;
+  font-size: 22px;
+  font-weight: 300;
+  font-style: italic;
+  color: #242424;
+  background-color: transparent;
+  padding: 0;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder {
+    color: #757575;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  &::-moz-placeholder {
+    color: #757575;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  &:-ms-input-placeholder {
+    color: #757575;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  &:-moz-placeholder {
+    color: #757575;
+    font-weight: 300;
+    font-style: italic;
+  }
+}
+
+.modal-form__policy {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  color: #757575;
+  margin-bottom: 0;
+
+  button {
+    @include reset-btn;
+    color: #757575;
+    text-decoration: underline;
+    outline: none;
+  }
+}
+
+.js-modal-form-title {
+  color: $blue !important
+}

@@ -1,0 +1,171 @@
+.future {
+  padding-top: 151px;
+  padding-bottom: 304px;
+
+  @media (max-width: 1450px) {
+    padding-bottom: 150px;
+  }
+
+  @media (max-width: 991px) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+}
+
+.future__title {
+  @include max-width(615px);
+  @include title;
+  color: $blue;
+  margin-left: 490px;
+  position: relative;
+  margin-bottom: 62px;
+  font-style: normal;
+  transform: skewX(348deg);
+
+  span {
+    color: $green;
+  }
+
+  &::before {
+    position: absolute;
+    content: url('/src/img/future-top.png');
+    left: -642px;
+    top: -200px;
+    transform: skewX(12deg);
+
+    @media (max-width: 991px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    margin-left: 340px;
+  }
+
+  @media (max-width: 991px) {
+    margin-left: 0;
+    transform: skewX(0deg);
+    font-style: italic;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 55px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+.future__text {
+  @include max-width(1100px);
+  font-size: 30px;
+  margin-bottom: 66px;
+
+  span {
+    color: $blue;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+.future__list-box {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  min-height: 302px;
+
+  @media (max-width: 575px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.future__list-bg {
+  position: absolute;
+  height: 100%;
+  background-color: #023762;
+  width: 1920px;
+  transform: translateX(-50%) translateY(-50%) skewX(348deg);
+  left: 34%;
+  top: 50%;
+}
+
+.future__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative;
+  gap: 50px;
+
+  &::before {
+    position: absolute;
+    content: url('/src/img/future-bottom.png');
+    right: -160px;
+    bottom: -220px;
+
+    @media (max-width: 1450px) {
+      content: none;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    content: 'tennis';
+    font-size: 400px;
+    font-weight: bold;
+    color: rgba(197, 226, 38, 0.1);
+    font-style: italic;
+    bottom: -562px;
+    left: -500px;
+    text-transform: uppercase;
+
+    @media (max-width: 1450px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 1450px) {
+    justify-content: space-evenly;
+  }
+}
+
+.future__item {
+  @include max-width(445px);
+  padding-left: 70px;
+  position: relative;
+  font-size: 22px;
+  color: white;
+
+  span {
+    font-weight: 600;
+    color: $blue;
+  }
+
+  &::before {
+    content: url('/src/img/icons/money-ball.png');
+    position: absolute;
+    left: 0px;
+    top: -5px;
+  }
+
+  @media (max-width: 1000px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 20px;
+  }
+}

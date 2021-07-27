@@ -1,0 +1,161 @@
+.steps {
+  padding-top: 165px;
+  padding-bottom: 147px;
+
+  @media (max-width: 1200px) {
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+
+  @media (max-width: 575px) {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+}
+
+.steps__title {
+  @include title;
+  font-style: normal;
+  transform: skewX(348deg);
+  margin-left: 617px;
+  position: relative;
+  margin-bottom: 68px;
+  color: $blue;
+  @include max-width(796px);
+
+  span {
+    color: $green;
+  }
+
+  &::before {
+    position: absolute;
+    content: url('/src/img/steps-racket.png');
+    left: -753px;
+    top: -143px;
+    transform: skewX(12deg);
+    z-index: -1;
+
+    @media (max-width: 1450px) {
+      left: -763px;
+    }
+
+    @media (max-width: 1200px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 1450px) {
+    margin-left: 327px;
+  }
+
+  @media (max-width: 1200px) {
+    transform: skewX(0deg);
+    font-style: italic;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 52px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 41px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 25px;
+  }
+}
+
+.steps__list {
+  @include reset-list;
+  margin-left: 522px;
+  position: relative;
+  z-index: 1;
+  transform: skewX(348deg);
+  font-style: normal;
+
+  @media (max-width: 1450px) {
+    margin-left: 222px;
+  }
+
+  @media (max-width: 1200px) {
+    transform: skewX(0deg);
+    margin-left: 0;
+    font-style: italic;
+  }
+}
+
+.steps__item {
+  margin-bottom: 50px;
+  padding-left: 60px;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    padding-left: 70px;
+  }
+
+  @media (max-width: 575px) {
+    padding-left: 58px;
+  }
+
+  &::before {
+    position: absolute;
+    font-style: normal;
+    font-size: 80px;
+    font-weight: 300;
+    color: $green;
+    top: -40px;
+    left: -10px;
+
+    @media (max-width: 1200px) {
+      font-style: italic;
+      left: 0px;
+      top: -15px;
+    }
+  }
+
+  &:nth-child(1)::before {
+    content: '1';
+  }
+  &:nth-child(2)::before {
+    content: '2';
+  }
+  &:nth-child(3)::before {
+    content: '3';
+  }
+  &:nth-child(4)::before {
+    content: '4';
+  }
+  &:nth-child(5)::before {
+    content: '5';
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.steps__item-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: $blue;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+.steps__item-text {
+  font-size: 24px;
+  margin-bottom: 0;
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+  }
+}

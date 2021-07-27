@@ -1,0 +1,201 @@
+.line-form {
+  position: relative;
+  padding-top: 67px;
+  padding-bottom: 67px;
+  width: 100%;
+
+  @media (max-width: 575px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &_profits {
+    top: -30px;
+  }
+
+  &_desc {
+    @media (max-width: 575px) {
+      display: none;
+    }
+  }
+}
+
+.line-form__bg {
+  position: absolute;
+  z-index: -1;
+  background-color: white;
+  width: 107%;
+  height: 100%;
+  @include central-align;
+  transform: translate3d(-49%, -50%, 0) skewX(348deg);
+
+  @media (max-width: 1200px) {
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  &_profits {
+    background-color: #f9fce9;
+  }
+}
+
+.line-form__title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 42px;
+  text-transform: uppercase;
+  color: $blue;
+
+  span {
+    color: $green;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 31px;
+  }
+}
+
+.line-form__text {
+  margin-bottom: 66px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+}
+
+.line-form__list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 66px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.line-form__item {
+  font-size: 24px;
+  font-weight: 500;
+  padding-left: 72px;
+  position: relative;
+
+  &:first-child {
+    margin-right: 43px;
+
+    @media (max-width: 767px) {
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    font-size: 21px;
+  }
+
+  &::before {
+    content: url('/src/img/icons/form-racket.png');
+    position: absolute;
+    top: 50%;
+    transform: translateY(-39%);
+    left: 0px;
+  }
+}
+
+.line-form__input-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 49px;
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.line-form__input-box {
+  min-height: 90px;
+  padding-bottom: 10px;
+  padding-top: 17px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #e6fafd;
+  display: flex;
+  flex-direction: column;
+  width: 23.9%;
+
+  @media (max-width: 991px) {
+    @include max-width(600px);
+    margin-bottom: 15px;
+  }
+
+  &_profits {
+    background-color: white;
+  }
+}
+
+.line-form__input-label {
+  font-size: 18px;
+  font-weight: 300;
+  color: #242424;
+  margin-bottom: 10px;
+}
+
+.line-form__input {
+  border: 1px solid transparent;
+  font-size: 22px;
+  font-weight: 300;
+  font-style: italic;
+  color: #242424;
+  background-color: transparent;
+  padding: 0;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-input-placeholder {
+    color: #757575;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  &::-moz-placeholder {
+    color: #757575;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  &:-ms-input-placeholder {
+    color: #757575;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  &:-moz-placeholder {
+    color: #757575;
+    font-weight: 300;
+    font-style: italic;
+  }
+}
+
+.line-form__policy {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  color: #757575;
+  margin-bottom: 0;
+
+  button {
+    @include reset-btn;
+    color: #757575;
+    text-decoration: underline;
+    outline: none;
+  }
+}

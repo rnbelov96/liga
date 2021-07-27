@@ -1,0 +1,175 @@
+.play {
+  min-height: 966px;
+  @include bg;
+  background-image: url('/src/img/bgs/play-bg.jpg');
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  @media (max-width: 991px) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @media (max-width: 575px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.play__title {
+  @include max-width(1000px);
+  margin-bottom: 58px;
+  @include title;
+  color: $blue;
+
+  span {
+    color: $green;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 51px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 38px;
+    margin-bottom: 30px;
+  }
+}
+
+.play__text {
+  @include max-width(850px);
+  color: white;
+  font-size: 30px;
+  margin-bottom: 64px;
+
+  span {
+    color: $green;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 23px;
+    margin-bottom: 30px;
+  }
+}
+
+.play__list-box {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 80px;
+
+  @media (max-width: 575px) {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+}
+
+.play__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1450px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 991px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.play__item {
+  font-size: 30px;
+  color: $blue;
+  padding-left: 70px;
+  position: relative;
+
+  &:first-child {
+    margin-right: -5px;
+
+    @media (max-width: 1450px) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: url('/src/img/icons/desc-ball.png');
+    left: 0px;
+    top: -5px;
+  }
+
+  span {
+    color: $green;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 18px;
+  }
+}
+
+.play__list-bg {
+  width: 106%;
+  height: 100%;
+  position: absolute;
+  @include central-align;
+  background-color: #00213a;
+  transform: translateX(-50%) translateY(-50%) skewX(348deg);
+
+  @media (max-width: 991px) {
+    width: 100%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.play__note {
+  @include max-width(841px);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #06cef0;
+  margin-bottom: 0;
+  position: relative;
+  transform: skewX(348deg);
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: auto;
+  font-style: normal;
+  top: -20px;
+  right: 60px;
+
+  &::after {
+    content: url('/src/img/play-ball.png');
+    position: absolute;
+    transform: skewX(12deg);
+    right: -260px;
+    top: 10px;
+    z-index: -1;
+
+    @media (max-width: 991px) {
+      content: none;
+    }
+  }
+  span {
+    color: white;
+  }
+
+  @media (max-width: 1450px) {
+    margin-right: auto;
+    margin-left: 0;
+    right: 0px;
+  }
+
+  @media (max-width: 991px) {
+    transform: skewX(0deg);
+    font-style: italic;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 20px;
+    padding: 20px;
+  }
+}
