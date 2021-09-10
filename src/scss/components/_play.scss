@@ -23,7 +23,7 @@
   color: $blue;
 
   span {
-    color: $green;
+    color: white;
   }
 
   @media (max-width: 767px) {
@@ -67,6 +67,29 @@
   @include reset-list;
   display: flex;
   justify-content: space-between;
+  position: relative;
+
+  &::before {
+    content: url('/src/img/new/2.png');
+    position: absolute;
+    bottom: -436px;
+    left: -240px;
+
+    @media (max-width: 1450px) {
+      content: none;
+    }
+  }
+
+  &::after {
+    content: url('/src/img/new/1.png');
+    position: absolute;
+    right: -83px;
+    top: -497px;
+
+    @media (max-width: 1380px) {
+      content: none;
+    }
+  }
 
   @media (max-width: 1450px) {
     flex-direction: column;
@@ -80,7 +103,7 @@
 
 .play__item {
   font-size: 30px;
-  color: $blue;
+  color: white;
   padding-left: 70px;
   position: relative;
 
@@ -141,25 +164,13 @@
   top: -20px;
   right: 60px;
 
-  &::after {
-    content: url('/src/img/play-ball.png');
-    position: absolute;
-    transform: skewX(12deg);
-    right: -260px;
-    top: 10px;
-    z-index: -1;
-
-    @media (max-width: 991px) {
-      content: none;
-    }
-  }
   span {
     color: white;
   }
 
   @media (max-width: 1450px) {
     margin-right: auto;
-    margin-left: 0;
+    margin-left: auto;
     right: 0px;
   }
 

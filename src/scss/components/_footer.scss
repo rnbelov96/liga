@@ -91,8 +91,8 @@
   &::before {
     content: url('/src/img/icons/phone.png');
     position: absolute;
-    left: 6px;
-    top: 6px;
+    left: -5px;
+    top: 18px;
   }
 
   @media (max-width: 1200px) {
@@ -126,9 +126,9 @@
   @include reset-btn;
   font-size: 14px;
   font-style: italic;
-  color: $green;
+  color: white;
   text-align: center;
-  border-bottom: 1px solid $green;
+  border-bottom: 1px solid white;
 
   &:focus {
     outline: none;
@@ -193,12 +193,12 @@
 
 .footer__callback {
   @include reset-btn;
-  color: $blue;
+  color: white;
   font-style: italic;
   font-size: 18px;
   text-align: center;
   text-decoration: none;
-  border-bottom: 1px solid $blue;
+  border-bottom: 1px solid white;
 
   &:focus {
     outline: none;

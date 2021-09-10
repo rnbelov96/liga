@@ -1,4 +1,16 @@
 /* montserrat-300 - latin_cyrillic */
+
+
+@font-face {
+  font-family: 'Piekos';
+  font-style: italic;
+  font-weight: 400;
+  src:
+    local(''),
+    url('../fonts/Piekos.woff') format('woff'),
+    url('../fonts/Piekos.woff2') format('woff2'),
+}
+
 @font-face {
   font-family: 'Rubik';
   font-style: italic;

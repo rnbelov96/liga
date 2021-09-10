@@ -1,7 +1,7 @@
 .partner {
   min-height: 804px;
   @include bg;
-  background-color: #023762; 
+  background-color: #023762;
   background-image: url('/src/img/bgs/partner-bg.jpg');
   padding-top: 150px;
   padding-bottom: 150px;
@@ -31,6 +31,28 @@
   position: relative;
   left: 50%;
 
+  &::before {
+    content: url('/src/img/new/7.png');
+    position: absolute;
+    left: -114px;
+    bottom: -358px;
+    transform: skewX(12deg);
+    @media (max-width: 1200px) {
+      content: none;
+    }
+  }
+
+  &::after {
+    content: url('/src/img/new/8.png');
+    position: absolute;
+    right: -260px;
+    bottom: -350px;
+    transform: skewX(12deg);
+    @media (max-width: 1200px) {
+      content: none;
+    }
+  }
+
   @media (max-width: 1200px) {
     transform: translateX(-50%) skewX(0deg);
     width: 100%;
@@ -50,7 +72,7 @@
   transform: skewX(12deg);
 
   span {
-    color: $green;
+    color: white;
   }
 
   @media (max-width: 1200px) {
@@ -73,9 +95,9 @@
 
 .partner__text {
   text-align: center;
-  color: white; 
-  font-size: 30px;
-  font-weight: 600;
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
   margin-bottom: 65px;
   transform: skewX(12deg);
 

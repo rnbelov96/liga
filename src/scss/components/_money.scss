@@ -25,7 +25,7 @@
   margin-bottom: 48px;
 
   span {
-    color: $green;
+    color: black;
   }
 
   @media (max-width: 1200px) {
@@ -168,13 +168,14 @@
   padding-right: 50px;
   margin-bottom: 0;
   background-color: #00213a;
-  color: $blue;
+  color: white;
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
   transform: skewX(348deg);
   font-style: normal;
   @include max-width(763px);
+  margin-left: 83px;
   position: relative;
   left: 50px;
   top: -20px;

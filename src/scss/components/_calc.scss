@@ -18,11 +18,11 @@
 
 .calc__title {
   @include title;
-  color: $blue;
+  color: white;
   margin-bottom: 50px;
 
   span {
-    color: $green;
+    color: $blue;
   }
 
   @media (max-width: 1450px) {
@@ -68,7 +68,7 @@
 }
 
 .calc__input-label {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   color: $blue;
   text-transform: uppercase;
@@ -78,30 +78,21 @@
     margin-bottom: 25px;
   }
 
-  @media (max-width: 767px) {
-    font-size: 27px;
-  }
-
   @media (max-width: 575px) {
     font-size: 18px;
   }
 }
 
 .calc__input-number {
-  font-size: 20px;
+  font-size: 24px;
   text-transform: uppercase;
-  color: $green;
+  color: white;
   font-weight: bold;
   margin-bottom: 0;
   line-height: 34px;
 
   span {
-    font-size: 30px;
-    margin-left: 18px;
-
-    @media (max-width: 575px) {
-      font-size: 31px;
-    }
+    font-size: 24px;
   }
 
   @media (max-width: 575px) {
@@ -207,7 +198,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
   color: $blue;
@@ -279,7 +270,7 @@
 .calc__result-label {
   font-size: 23px;
   font-weight: 900;
-  color: $green;
+  color: white;
   margin-right: 30px;
   text-transform: uppercase;
   text-align: right;
@@ -322,7 +313,7 @@
   }
 
   &_green {
-    color: $green;
+    color: white;
   }
 
   @media (max-width: 1200px) {

@@ -25,13 +25,13 @@
   position: relative;
 
   span {
-    color: $green;
+    color: white;
   }
 
   &::after {
-    content: url('/src/img/clients-ball.png');
+    content: url('/src/img/new/5.png');
     position: absolute;
-    right: -780px;
+    right: -710px;
     top: -460px;
 
     @media (max-width: 1400px) {
@@ -168,6 +168,19 @@
   font-weight: bold;
   transform: skewX(348deg);
   font-style: normal;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: url('/src/img/new/6.png');
+    left: -340px;
+    top: 0px;
+    transform: skewX(12deg);
+
+    @media (max-width: 1200px) {
+      content: none;
+    }
+  }
 
   span {
     color: white;

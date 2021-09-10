@@ -24,7 +24,7 @@
   @include max-width(796px);
 
   span {
-    color: $green;
+    color: black;
   }
 
   &::before {
@@ -104,16 +104,15 @@
   &::before {
     position: absolute;
     font-style: normal;
-    font-size: 80px;
-    font-weight: 300;
-    color: $green;
-    top: -40px;
+    font-weight: 900;
+    font-size: 70px;
+    color: black;
+    top: -13px;
     left: -10px;
 
     @media (max-width: 1200px) {
       font-style: italic;
       left: 0px;
-      top: -15px;
     }
   }
 

@@ -1,7 +1,7 @@
 .desc {
   @include bg;
   background-image: url('/src/img/bgs/desc-bg.jpg');
-  padding-bottom: 98px;
+  padding-bottom: 120px;
 
   @media (max-width: 991px) {
     padding-bottom: 70px;
@@ -14,12 +14,12 @@
 }
 
 .desc__title {
-  margin-top: 58px;
+  margin-top: 42px;
   margin-bottom: 27px;
   @include title;
-  color: white;
-  @include max-width(860px);
-  font-size: 40px;
+  color: black;
+  @include max-width(1055px);
+  font-size: 50px;
 
   @media (max-width: 1450px) {
     margin-top: 35px;
@@ -29,27 +29,49 @@
     font-size: 32px;
     margin-top: 40px;
   }
+}
+
+.desc__title-row {
+  background-color: #c5e226;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 5px;
 
   span {
-    color: $green;
+    font-family: 'Piekos';
+    font-size: 75px;
+    -webkit-text-stroke: 0.000001px #fff;
+    line-height: 24px;
+
+    @media (max-width: 575px) {
+      font-size: 50px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
 .desc__text {
   margin-bottom: 35px;
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 800;
   text-transform: uppercase;
-  @include max-width(714px);
-  color: $blue;
+  @include max-width(925px);
+  color: white;
 
   @media (max-width: 575px) {
     font-size: 20px;
   }
 
   span {
-    color: $green;
-    font-size: 30px;
+    color: $blue;
+    font-size: 34px;
+
+    @media (max-width: 575px) {
+      font-size: 26px;
+    }
   }
 }
 
@@ -68,7 +90,7 @@
   position: relative;
   margin-bottom: 39px;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   color: white;
 
   &:nth-child(odd) {
