@@ -13,9 +13,6 @@ const adultsRange = document.querySelector(
   '.js-adults-range',
 ) as HTMLInputElement;
 const kidsRange = document.querySelector('.js-kids-range') as HTMLInputElement;
-const branchRange = document.querySelector(
-  '.js-branch-range',
-) as HTMLInputElement;
 
 const gainLabelEl = document.querySelector('.js-gain') as HTMLSpanElement;
 const incomeLabelEl = document.querySelector('.js-income') as HTMLSpanElement;
@@ -26,13 +23,11 @@ let income: number;
 let personCurrentStep = 2;
 let adultsCurrentStep = 2;
 let kidsCurrentStep = 2;
-let branchCurrentStep = 2;
 
 const calcGain = () => {
   gain = (Number(personRange.value) * 4500
       + Number(adultsRange.value) * 10500
-      + Number(kidsRange.value) * 8500)
-    * Number(branchRange.value);
+      + Number(kidsRange.value) * 8500);
   gainLabelEl.textContent = gain.toLocaleString();
   return gain;
 };
@@ -105,23 +100,6 @@ kidsRange.addEventListener('input', e => {
     (kidsCurrentStep / steps) * 100,
   )}%, ${rightColor} ${String(
     (kidsCurrentStep / steps) * 100,
-  )}%, ${rightColor} 100%)`;
-
-  calcGain();
-  calcIncome();
-});
-
-branchRange.addEventListener('input', e => {
-  const rangeEl = e.currentTarget as HTMLInputElement;
-
-  const steps = (Number(rangeEl.max) - Number(rangeEl.min)) / Number(rangeEl.step);
-
-  branchCurrentStep = (Number(rangeEl.value) - Number(rangeEl.min)) / Number(rangeEl.step);
-
-  rangeEl.style.background = `linear-gradient(to right, ${leftColor} 0%, ${leftColor} ${String(
-    (branchCurrentStep / steps) * 100,
-  )}%, ${rightColor} ${String(
-    (branchCurrentStep / steps) * 100,
   )}%, ${rightColor} 100%)`;
 
   calcGain();
