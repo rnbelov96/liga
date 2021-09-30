@@ -23,7 +23,7 @@ const closeModal = (modalEl: HTMLDivElement) => {
 
 const openModal = (modalEl: HTMLDivElement) => {
   if (window.innerWidth > document.body.clientWidth) {
-    document.body.style.paddingRight = '15px';
+    document.body.style.paddingRight = `${window.innerWidth - document.body.clientWidth}px`;
   }
   modalEl.style.opacity = '1';
   modalEl.style.overflowY = 'auto';
