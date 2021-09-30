@@ -12,14 +12,19 @@ const modalFormInfoList = [
   },
 ];
 
+
 const closeModal = (modalEl: HTMLDivElement) => {
   modalEl.style.opacity = '0';
   modalEl.style.overflowY = 'inherit';
   modalEl.style.pointerEvents = 'none';
   document.body.style.overflowY = 'auto';
+  document.body.style.paddingRight = '0px';
 };
 
 const openModal = (modalEl: HTMLDivElement) => {
+  if (window.innerWidth > document.body.clientWidth) {
+    document.body.style.paddingRight = '15px';
+  }
   modalEl.style.opacity = '1';
   modalEl.style.overflowY = 'auto';
   modalEl.style.pointerEvents = 'auto';
@@ -32,12 +37,17 @@ const [formModalEl, policyModalEl] = modalElList;
 const formTitleEl = formModalEl.querySelector(
   '.js-modal-form-title',
 ) as HTMLHeadingElement;
-const formBtnLabelEl = formModalEl.querySelector('.js-modal-form-btn-label') as HTMLSpanElement;
+const formBtnLabelEl = formModalEl.querySelector(
+  '.js-modal-form-btn-label',
+) as HTMLSpanElement;
 
 const modalWrapperElList = document.querySelectorAll('.modal__center-wrapper');
 modalElList.forEach(modalEl => {
   modalEl.addEventListener('click', (e: Event) => {
-    if (e.target === e.currentTarget || [...modalWrapperElList].includes(e.target as Element)) {
+    if (
+      e.target === e.currentTarget ||
+      [...modalWrapperElList].includes(e.target as Element)
+    ) {
       const clickedModal = e.currentTarget as HTMLDivElement;
       closeModal(clickedModal);
     }
