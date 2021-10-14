@@ -12,7 +12,6 @@ const modalFormInfoList = [
   },
 ];
 
-
 const closeModal = (modalEl: HTMLDivElement) => {
   modalEl.style.opacity = '0';
   modalEl.style.overflowY = 'inherit';
@@ -45,8 +44,8 @@ const modalWrapperElList = document.querySelectorAll('.modal__center-wrapper');
 modalElList.forEach(modalEl => {
   modalEl.addEventListener('click', (e: Event) => {
     if (
-      e.target === e.currentTarget ||
-      [...modalWrapperElList].includes(e.target as Element)
+      e.target === e.currentTarget
+      || [...modalWrapperElList].includes(e.target as Element)
     ) {
       const clickedModal = e.currentTarget as HTMLDivElement;
       closeModal(clickedModal);
